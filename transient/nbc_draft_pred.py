@@ -11,13 +11,17 @@ import tensorflow as tf
 import pandas as pd
 import numpy as np
 
-player_box = pd.read_csv("./player_box.csv")
-
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import VotingClassifier
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
 
+player_box = pd.read_csv("./player_box.csv")
 player_info = pd.read_csv("./player_info.csv")
 
 class Draft():
@@ -82,17 +86,8 @@ list(working_dataset)
 working_dataset = working_dataset[["first_name", "last_name", 'pts', 'fga', 'fga3', 'fgm', 'fgm3', 'fta', 'ftm', 'ast', 'blk', 'stl', 'dreb', 'oreb', 'reb', 'pf', 'tf', 'tov', 'mins_played', 'grade_level', 'division',"height_in", "season_x"]]
 
 working_dataset = working_dataset.dropna()
-# working_dataset = working_dataset[~working_dataset.index.duplicated()]
-# working_dataset = working_dataset[~working_dataset['division'].isnull()]
-# working_dataset = working_dataset[~working_dataset['first_name'].isnull()]
-#working_dataset = working_dataset[~working_dataset['first_name'].isnull()]
 
 list(working_dataset)
-
-# player_stats_2014 = player_stats[player_stats['season_x']==2014]
-# player_stats_2015 = player_stats[player_stats['season_x']==2015]
-# player_stats_2016 = player_stats[player_stats['season_x']==2016]
-# player_stats_2017 = player_stats[player_stats['season_x']==2017]
 
 Y = np.zeros((working_dataset.shape[0], 1))
 
@@ -128,32 +123,25 @@ X = X[[
  'division',
  'height_in']]
 
-# def temp(first_name, last_name, season):
-  
-#   retr
+num_pipeline = Pipeline([
+        # ('imputer', Imputer(strategy="median")),
+        ('std_scaler', StandardScaler())
+    ])
 
-# draft.drafted(name, season+1)
+full_pipeline = ColumnTransformer([
+        ("num", num_pipeline, num_attribs),
+        ("cat", OneHotEncoder(), cat_attribs),
+    ])
 
-from sklearn.model_selection import train_test_split
+full_pipeline = ColumnTransformer([
+        ("num", num_pipeline, num_attribs),
+        ("cat", OneHotEncoder(), cat_attribs),
+    ])
+
+X = full_pipeline.fit_transform(X)
+
 
 X_train, X_test, y_train, y_test = train_test_split(X.values, Y, test_size=0.2, random_state=42)
-
-# from sklearn.tree import DecisionTreeClassifier
-
-
-# tree_clf = DecisionTreeClassifier(max_depth=4, random_state=42)
-# tree_clf.fit(X_train, y_train)
-
-# from sklearn.tree import export_graphviz
-#
-# export_graphviz(
-#         tree_clf,
-#         out_file="/tmp/iris_tree.dot",
-#         feature_names=iris.feature_names[2:],
-#         class_names=iris.target_names,
-#         rounded=True,
-#         filled=True
-#     )
 
 log_clf = LogisticRegression(random_state=42)
 rnd_clf = RandomForestClassifier(random_state=42)
