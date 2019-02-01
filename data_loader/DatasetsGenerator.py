@@ -98,7 +98,7 @@ def nba_draftpicks():
 		'Overall Pick']
 
 	for i, date in enumerate(os.listdir(html_rootdir)):
-		filename = date.replace('.html', '')
+		filename = date.replace('.htm', '')
 		csv_filepath = os.path.join(csv_rootdir, '{0}.csv'.format(filename))
 		with open(csv_filepath, 'w') as csv_file:
 		    soup = BeautifulSoup(html_files[i], 'lxml')
@@ -116,9 +116,9 @@ def generate_draftpicks():
 	Creates a process which handles generating nba draftpicks dataset in
 	./data_loader/data/draftpicks
 	"""
-	Process(target=nba_draftpicks)
-
-def generate_early_applicants(self):
+	p1 = Process(target=nba_draftpicks)
+	p1.start()
+def generate_early_applicants():
 	"""
 	Creates a process pool which handles generating nba early applicants dataset in
 	./data_loader/data/early_applicants
@@ -127,9 +127,9 @@ def generate_early_applicants(self):
 		('http://www.nba.com/2016/news/04/26/early-entry-candidates-2016-draft/', '2016'),
 		('http://www.nba.com/2015/news/04/28/early-entry-candidates-for-2015-draft/', '2015')
 	)
-	pool = Pool()
-	pool.map(get_year_csv, args)
-
+	for arg in args:
+		process = Process(target=get_year_csv, args=[arg])
+		process.start()
 
 
 def getall():
@@ -137,4 +137,8 @@ def getall():
 	Generates all custom made datasets
 	"""
 	generate_draftpicks()
+	early_applicants_txt2csv()
 	generate_early_applicants()
+
+if __name__ == '__main__':
+	getall()
