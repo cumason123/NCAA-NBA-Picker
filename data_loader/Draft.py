@@ -2,8 +2,9 @@ import pandas as pd
 class Draft():
   def __init__(self):
     self.data = {}
-    for year in range(2014, 2019):
-      self.data[year] = pd.read_csv('./data_loader/data/draftpicks/csv/{0}.csv'.format(year))
+    for year in range(2014, 2018):
+      csvfile = './data_loader/data/draftpicks/csv/{0}.csv'.format(year)
+      self.data[year] = pd.read_csv(csvfile)
       
   def __contains__(self, value):
     """

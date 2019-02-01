@@ -111,34 +111,20 @@ def nba_draftpicks():
 		            writer.writerow(get_nba_data(row))
 
 
-def generate_draftpicks():
+def getall():
 	"""
-	Creates a process which handles generating nba draftpicks dataset in
-	./data_loader/data/draftpicks
-	"""
-	p1 = Process(target=nba_draftpicks)
-	p1.start()
-def generate_early_applicants():
-	"""
-	Creates a process pool which handles generating nba early applicants dataset in
-	./data_loader/data/early_applicants
+	Generates all custom made datasets
 	"""
 	args = (
 		('http://www.nba.com/2016/news/04/26/early-entry-candidates-2016-draft/', '2016'),
 		('http://www.nba.com/2015/news/04/28/early-entry-candidates-for-2015-draft/', '2015')
 	)
-	for arg in args:
-		process = Process(target=get_year_csv, args=[arg])
-		process.start()
-
-
-def getall():
-	"""
-	Generates all custom made datasets
-	"""
-	generate_draftpicks()
-	early_applicants_txt2csv()
-	generate_early_applicants()
+	pool = Pool()
+	pool.map(get_year_csv, args)
+	pool.apply(nba_draftpicks)
+	pool.apply(early_applicants_txt2csv)
+	pool.close()
+	pool.join()
 
 if __name__ == '__main__':
 	getall()
