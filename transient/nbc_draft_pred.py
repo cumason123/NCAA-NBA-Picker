@@ -133,11 +133,6 @@ full_pipeline = ColumnTransformer([
         ("cat", OneHotEncoder(), cat_attribs),
     ])
 
-full_pipeline = ColumnTransformer([
-        ("num", num_pipeline, num_attribs),
-        ("cat", OneHotEncoder(), cat_attribs),
-    ])
-
 X = full_pipeline.fit_transform(X)
 
 
