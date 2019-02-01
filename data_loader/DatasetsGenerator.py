@@ -17,6 +17,7 @@ def getname(line):
 	lastname = ' '.join(split_name[1:])
 	return firstname, lastname
 
+
 def early_applicants_txt2csv():
 	"""
 	Some of the nba early_applicant website formats are difficult to webscrape, so assuming
@@ -39,6 +40,7 @@ def early_applicants_txt2csv():
 					writer.writerow(getname(line))
 					line = file.readline()
 
+
 def get_year_csv(args):
 	"""
 	Generates the year csv given some url to web scrape and the year you want to scrape on.
@@ -60,6 +62,7 @@ def get_year_csv(args):
 				last_name = ' '.join(name[1:])
 				writer.writerow([first_name, last_name])
 
+
 def get_nba_data(soup):
 	"""
 	Given some soup object, parses and returns nba player information. Used when 
@@ -67,12 +70,13 @@ def get_nba_data(soup):
 
 	@param soup: BeautifulSoup object of a table row
 	"""
-    player = soup.find('td', {'class':'player'}).getText()
-    team = soup.find('td', {'class':'team'}).getText()
-    affiliation = soup.find('td', {'class':'first text'}).getText()
-    year, num, pick, overrall = soup.findAll('td', {'class':''})
-    return [player, team, affiliation, year.getText(), num.getText(), pick.getText(),
-            overrall.getText()]
+	player = soup.find('td', {'class':'player'}).getText()
+	team = soup.find('td', {'class':'team'}).getText()
+	affiliation = soup.find('td', {'class':'first text'}).getText()
+	year, num, pick, overrall = soup.findAll('td', {'class':''})
+	return [player, team, affiliation, year.getText(), num.getText(), pick.getText(),
+	        overrall.getText()]
+
 
 def nba_draftpicks():
 	"""
@@ -106,6 +110,7 @@ def nba_draftpicks():
 		        if k != 0:
 		            writer.writerow(get_nba_data(row))
 
+
 def generate_draftpicks():
 	"""
 	Creates a process which handles generating nba draftpicks dataset in
@@ -113,7 +118,7 @@ def generate_draftpicks():
 	"""
 	Process(target=nba_draftpicks)
 
-def generate_early_applicants():
+def generate_early_applicants(self):
 	"""
 	Creates a process pool which handles generating nba early applicants dataset in
 	./data_loader/data/early_applicants
@@ -125,6 +130,11 @@ def generate_early_applicants():
 	pool = Pool()
 	pool.map(get_year_csv, args)
 
-if __name__ == '__main__':
+
+
+def getall():
+	"""
+	Generates all custom made datasets
+	"""
 	generate_draftpicks()
 	generate_early_applicants()
