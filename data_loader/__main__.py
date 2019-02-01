@@ -6,6 +6,10 @@ from requests import get
 import lxml
 from multiprocessing import Process, Pool
 def getname(line):
+	"""
+	Deciphers and parses the name of a player given a line from a file within
+	./data_loader/data/early_applicants/txt
+	"""
 	parts = line.replace('\n', '').replace('|', ',').split(',')
 	fullname = parts[0]
 	split_name = fullname.split(' ')
@@ -14,6 +18,12 @@ def getname(line):
 	return firstname, lastname
 
 def early_applicants_txt2csv():
+	"""
+	Some of the nba early_applicant website formats are difficult to webscrape, so assuming
+	we have the directory ./data_loader/data/early_applicants/txt which has a handful of
+	txt files containing pasted content from the site, we will generate csv files
+	of those players.
+	"""
 	rootdir = './data_loader/data/early_applicants/txt'
 	filenames = os.listdir(rootdir)
 	filenames = [os.path.join(rootdir, filename) for filename in filenames]
@@ -30,6 +40,10 @@ def early_applicants_txt2csv():
 					line = file.readline()
 
 def get_year_csv(args):
+	"""
+	Generates the year csv given some url to web scrape and the year you want to scrape on.
+	Used to generate the early_applicants csv validation file
+	"""
 	url, year = args
 	content = get(url).content
 	soup = BeautifulSoup(content, 'lxml')
@@ -47,6 +61,12 @@ def get_year_csv(args):
 				writer.writerow([first_name, last_name])
 
 def get_nba_data(soup):
+	"""
+	Given some soup object, parses and returns nba player information. Used when 
+	generating draftpick data
+
+	@param soup: BeautifulSoup object of a table row
+	"""
     player = soup.find('td', {'class':'player'}).getText()
     team = soup.find('td', {'class':'team'}).getText()
     affiliation = soup.find('td', {'class':'first text'}).getText()
@@ -55,6 +75,10 @@ def get_nba_data(soup):
             overrall.getText()]
 
 def nba_draftpicks():
+	"""
+	Generates nba draftpicks using pasted html source code inside the directory
+	./data_loader/data/draftpicks/html
+	"""
 	url = 'https://stats.nba.com/draft/history/?Season='
 	html_rootdir = './data_loader/data/draftpicks/html'
 	csv_rootdir = './data_loader/data/draftpicks/csv'
@@ -83,9 +107,17 @@ def nba_draftpicks():
 		            writer.writerow(get_nba_data(row))
 
 def generate_draftpicks():
+	"""
+	Creates a process which handles generating nba draftpicks dataset in
+	./data_loader/data/draftpicks
+	"""
 	Process(target=nba_draftpicks)
 
 def generate_early_applicants():
+	"""
+	Creates a process pool which handles generating nba early applicants dataset in
+	./data_loader/data/early_applicants
+	"""
 	args = (
 		('http://www.nba.com/2016/news/04/26/early-entry-candidates-2016-draft/', '2016'),
 		('http://www.nba.com/2015/news/04/28/early-entry-candidates-for-2015-draft/', '2015')
