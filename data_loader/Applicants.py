@@ -2,8 +2,8 @@ import pandas as pd
 class Applicants():
   def __init__(self):
     self.data = {}
-    for year in range(2014, 2019):
-      self.data[year] = pd.read_csv('./data_loader/data/early_applicants/csv/{0}.csv'.format(year))
+    for year in range(2014, 2018):
+      self.data[year] = pd.read_csv('./data_loader/data/early_applicants/csv/{0}.csv'.format(year), sep=',')
       
   def __contains__(self, value):
     """
