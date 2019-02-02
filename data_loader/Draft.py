@@ -34,11 +34,11 @@ class Draft():
     """
     column = {'drafted': []}
 
-    
+
     for i, player in dataset.iterrows():
       name = ' '.join((player['first_name'], player['last_name']))
 
-      if (name, player['season_x']) in self:
+      if (name, player['season_x']+1) in self:
         column['drafted'].append(1)
 
       else:
