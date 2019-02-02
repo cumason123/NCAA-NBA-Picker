@@ -5,7 +5,10 @@ class Applicants():
     for year in range(2014, 2018):
       csvfile = './data_loader/data/early_applicants/csv/{0}.csv'.format(year)
       self.data[year] = pd.read_csv(csvfile)
-      
+
+  def get_applicant_df(self):
+
+
   def __contains__(self, value):
     """
     Returns a 1 if that player was an early applicant, 0 otherwise

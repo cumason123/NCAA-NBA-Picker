@@ -4,7 +4,7 @@ import numpy as np
 
 #tf.enable_eager_execution()
 
-df = pd.read_csv("/tmp/player_box.csv")
+df = pd.read_csv("./data_loader/data/player_box.csv")
 
 player = df[df['player_id'] == 2082634.0]
 
