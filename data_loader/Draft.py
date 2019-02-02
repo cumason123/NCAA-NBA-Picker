@@ -11,17 +11,21 @@ class Draft():
     Returns a 1 if that player was an early applicant, 0 otherwise
 
     @param name: full capitalized string representing first and last name
-    @param year: number representing the year of the season the player drafted to the nba
+    @param year: number representing the year of the season the player applied to the nba
     """
-    name, year, dataset = value
+    if len(value) == 2:
+      name, year = value
+    else:
+      raise(ValueError('Expected (name, year) or (name, year, dataset), found tuple of len {0}'.format(len(value))))
 
     keys = self.data.keys()
     if year in keys:
       dataset = self.data[year]
-      for player in dataset.Player:
-        if name == player:
-          return 1
-    return 0
+      for i, player in dataset.iterrows():
+        dataset_player = player.Player
+        if name == dataset_player:
+          return True
+    return False
 
   def join(self, dataset):
     """
@@ -30,12 +34,13 @@ class Draft():
     """
     column = {'drafted': []}
 
-    for player in dataset.Player:
-      name = ' '.join(player.first_name, player.last_name)
+    for i, player in dataset.iterrows():
+      name = ' '.join((player['first_name'], player['last_name']))
 
-      if (name, player.season, dataset) in self:
+      if (name, player['season_x']) in self:
         column['drafted'].append(1)
 
       else:
         column['drafted'].append(0)
-    return dataset + pd.DataFrame(data=column)
+
+    return dataset.append(pd.DataFrame(data=column))
