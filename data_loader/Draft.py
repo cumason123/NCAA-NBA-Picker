@@ -34,6 +34,7 @@ class Draft():
     """
     column = {'drafted': []}
 
+    
     for i, player in dataset.iterrows():
       name = ' '.join((player['first_name'], player['last_name']))
 
@@ -43,4 +44,4 @@ class Draft():
       else:
         column['drafted'].append(0)
 
-    return dataset.append(pd.DataFrame(data=column))
+    return dataset.join(pd.DataFrame(data=column))
