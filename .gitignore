@@ -158,3 +158,4 @@ dmypy.json
 .venv/
 
 # End of https://www.gitignore.io/api/macos,python,jupyternotebook
+.idea/
