@@ -3,7 +3,8 @@ class Applicants():
   def __init__(self):
     self.data = {}
     for year in range(2014, 2018):
-      self.data[year] = pd.read_csv('./data_loader/data/early_applicants/csv/{0}.csv'.format(year), sep=',')
+      csvfile = './data_loader/data/early_applicants/csv/{0}.csv'.format(year)
+      self.data[year] = pd.read_csv(csvfile)
       
   def __contains__(self, value):
     """
@@ -12,15 +13,19 @@ class Applicants():
     @param name: full capitalized string representing first and last name
     @param year: number representing the year of the season the player applied to the nba
     """
-    name, year, dataset = value
+    if len(value) == 2:
+      name, year = value
+    else:
+      raise(ValueError('Expected (name, year) or (name, year, dataset), found tuple of len {0}'.format(len(value))))
 
     keys = self.data.keys()
     if year in keys:
       dataset = self.data[year]
-      for player in dataset.Player:
-        if name == player:
-          return 1
-    return 0
+      for i, player in dataset.iterrows():
+        dataset_player = ' '.join((player['first_name'], player['last_name']))
+        if name == dataset_player:
+          return True
+    return False
 
   def join(self, dataset):
     """
@@ -29,13 +34,14 @@ class Applicants():
     """
     column = {'applied': []}
 
-    for player in dataset.Player:
-      name = ' '.join(player.first_name, player.last_name)
+    for i, player in dataset.iterrows():
+      name = ' '.join((player['first_name'], player['last_name']))
 
-      if (name, player.season, dataset) in self:
+      if (name, player['season_x']) in self:
         column['applied'].append(1)
 
       else:
         column['applied'].append(0)
 
-    return datasets + pd.DataFrame(data=column)
+
+    return dataset.join(pd.DataFrame(data=column))
