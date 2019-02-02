@@ -43,5 +43,4 @@ class Applicants():
       else:
         column['applied'].append(0)
 
-
     return dataset.join(pd.DataFrame(data=column))
