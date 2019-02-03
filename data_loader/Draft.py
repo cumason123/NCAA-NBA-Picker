@@ -16,7 +16,7 @@ class Draft():
     """
 
     for i, player in self.data.iterrows():
-      if fullname == self.data.Player:
+      if fullname == player.Player:
         return True
     return False
 
