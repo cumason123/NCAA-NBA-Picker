@@ -3,7 +3,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import VotingClassifier
+from data_loader.DatasetsGenerator import get_classifier_data
 
+X, Y = get_classifier_data()
+print(len(Y) - sum(Y))
 X_train, X_test, y_train, y_test = train_test_split(X.values, Y, test_size=0.2, random_state=42)
 
 log_clf = LogisticRegression(random_state=42)

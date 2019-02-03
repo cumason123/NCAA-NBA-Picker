@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from requests import get
 import lxml
 from multiprocessing import Process, Pool
+import pandas as pd
 def getname(line):
 	"""
 	Deciphers and parses the name of a player given a line from a file within
@@ -162,6 +163,13 @@ def getall():
 	pool.apply(early_applicants_txt2csv)
 	pool.close()
 	pool.join()
+
+def get_classifier_data():
+	players = pd.read_csv('./data_loader/data/ncaa/player_stats.csv')
+	Y = players.drafted
+	X = players.drop(columns=['drafted', 'first_name', 'last_name', 'xml_name', 'class_desc', 'school', 'conference',
+		'position', 'player_id_AND_season', 'player_id_x', 'game_date', 'game_id', 'season_x', 'team_code_x'])
+	return X, Y
 
 if __name__ == '__main__':
 	getall()
