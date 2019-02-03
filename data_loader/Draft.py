@@ -5,26 +5,19 @@ class Draft():
     for year in range(2014, 2018):
       csvfile = './data_loader/data/draftpicks/csv/{0}.csv'.format(year)
       self.data[year] = pd.read_csv(csvfile)
-      
-  def __contains__(self, value):
+    self.data = pd.concat(self.data).drop_duplicates().reset_index(drop=True)
+
+  def __contains__(self, fullname):
     """
     Returns a 1 if that player was an early applicant, 0 otherwise
 
     @param name: full capitalized string representing first and last name
     @param year: number representing the year of the season the player applied to the nba
     """
-    if len(value) == 2:
-      name, year = value
-    else:
-      raise(ValueError('Expected (name, year) or (name, year, dataset), found tuple of len {0}'.format(len(value))))
 
-    keys = self.data.keys()
-    if year in keys:
-      dataset = self.data[year]
-      for i, player in dataset.iterrows():
-        dataset_player = player.Player
-        if name == dataset_player:
-          return True
+    for i, player in self.data.iterrows():
+      if fullname == self.data.Player:
+        return True
     return False
 
   def join(self, dataset):
@@ -34,11 +27,11 @@ class Draft():
     """
     column = {'drafted': []}
 
-    
+
     for i, player in dataset.iterrows():
       name = ' '.join((player['first_name'], player['last_name']))
 
-      if (name, player['season_x']) in self:
+      if name in self:
         column['drafted'].append(1)
 
       else:
