@@ -164,12 +164,14 @@ def getall():
 	pool.close()
 	pool.join()
 
-def get_classifier_data():
+def get_classifier_data_feature():
 	players = pd.read_csv('./data_loader/data/ncaa/player_stats.csv')
-	Y = players.drafted
-	X = players.drop(columns=['drafted', 'first_name', 'last_name', 'xml_name', 'class_desc', 'school', 'conference',
-		'position', 'player_id_AND_season', 'player_id_x', 'game_date', 'game_id', 'season_x', 'team_code_x'])
-	return X, Y
+	#used categorical cols: 'school', 'conference', 'position',
+	X = players.drop(columns=['drafted', 'first_name', 'last_name', 'xml_name', 'class_desc',
+		 'player_id_AND_season', 'player_id_x', 'game_date', 'game_id', 'season_x', 'team_code_x'])
+	X.to_csv("player_stats_raw_features.csv")
+	y = players.drafted
+	y.to_csv("player_stats_labels.csv")
 
 if __name__ == '__main__':
 	getall()
