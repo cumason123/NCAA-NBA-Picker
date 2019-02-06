@@ -15,4 +15,4 @@ MIT
 
 Our original team members are Curtis Mason, Jennifer (Jaehei) Kim, Julius Frost, Deren Singh, Zack Light (Yi Zhang). 
 
-Curtis Mason, Julius Frost, [Zack Light (Yi Zhang)](https://zacklight.com "Zack Light (Yi Zhang)"), have contributed to this github repository.
+[Curtis Mason](https://github.com/cumason123 "Curtis Mason Github Profile"), [Julius Frost](https://github.com/juliusfrost "Julius Frost Github Profile"), [Zack Light (Yi Zhang)](https://zacklight.com "Zack Light (Yi Zhang)"), have contributed to this github repository.
