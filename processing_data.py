@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1FduXTtlJ4u11cx1M0S3rXTHcor8yOfBd
 """
 import pandas as pd
+import numpy as np
 from sklearn_pandas import CategoricalImputer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
@@ -72,8 +73,7 @@ full_pipeline = ColumnTransformer([
 ])
 
 working = full_pipeline.fit_transform(X)
-np.savetxt("player_stats_features.csv", working, delimiter=",")
-
+np.savetxt("./data_loader/data/training_data/player_stats_features.csv", working, delimiter=",")
 
 X, y = pd.read_csv("./data_loader/data/training_data/player_stats_features.csv", index_col=0), pd.read_csv(
         "./data_loader/data/training_data/player_stats_labels.csv", index_col=0)
