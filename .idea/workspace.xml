@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60c91c1c-5d59-4b39-bd81-53df2b73f1ac" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/classifiers_visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NCAA-NBA-Picker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NCAA-NBA-Picker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing_data.py" afterDir="false" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,17 +20,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/NCAA_NBA_Picker$nbc_draft_pred.coverage" NAME="nbc_draft_pred Coverage Results" MODIFIED="1549043240732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NCAA_NBA_Picker$change_encoding.coverage" NAME="change_encoding Coverage Results" MODIFIED="1549043215256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Gitee/CMBC/News/News_para_level" />
+    <SUITE FILE_PATH="coverage/NCAA_NBA_Picker$change_encoding.coverage" NAME="change_encoding Coverage Results" MODIFIED="1549043215256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Gitee/CMBC/News/News_para_level" />
     <SUITE FILE_PATH="coverage/NCAA_NBA_Picker$processing_data.coverage" NAME="processing_data Coverage Results" MODIFIED="1549043583522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NCAA_NBA_Picker$nbc_draft_pred.coverage" NAME="nbc_draft_pred Coverage Results" MODIFIED="1549043240732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classifiers.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="71">
               <caret line="32" column="93" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
+=======
+            <state relative-caret-position="180">
+              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -30,6 +43,42 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classifiers_visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/processing_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="785">
+              <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+              <folding>
+                <element signature="e#195#214#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_loader/Applicants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -43,6 +92,8 @@
     <findStrings>
       <find>num_attribs</find>
       <find>name</find>
+      <find>np</find>
+      <find>player_stats.csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,7 +102,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../Gitee/CMBC/News/News_para_level/change_encoding.py" />
+        <option value="$USER_HOME$/Gitee/CMBC/News/News_para_level/change_encoding.py" />
         <option value="$PROJECT_DIR$/nbc_draft_pred.py" />
         <option value="$PROJECT_DIR$/../handson-ml-self/02_end_to_end_machine_learning_project.ipynb" />
         <option value="$PROJECT_DIR$/transient/bank.py" />
@@ -60,15 +111,24 @@
         <option value="$PROJECT_DIR$/data_loader/data/early_applicants/txt/2017.txt" />
         <option value="$PROJECT_DIR$/data_loader/data/early_applicants/txt/2014.txt" />
         <option value="$PROJECT_DIR$/data_loader/DatasetsGenerator.py" />
-        <option value="$PROJECT_DIR$/processing_data.py" />
         <option value="$PROJECT_DIR$/classifiers.py" />
+        <option value="$PROJECT_DIR$/classififers_visualization.py" />
+        <option value="$PROJECT_DIR$/classifiers_visualization.py" />
+        <option value="$PROJECT_DIR$/processing_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="1907" />
     <option name="width" value="1943" />
     <option name="height" value="2100" />
+=======
+    <option name="x" value="28" />
+    <option name="y" value="46" />
+    <option name="width" value="1228" />
+    <option name="height" value="777" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -77,7 +137,29 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
+<<<<<<< HEAD
     <panes />
+=======
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="NCAA-NBA-Picker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="NCAA-NBA-Picker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="data_loader" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -85,6 +167,13 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,23 +187,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classifiers">
-    <configuration name="change_encoding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.classifiers_visualization">
+    <configuration name="DatasetsGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NCAA-NBA-Picker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Gitee/CMBC/News/News_para_level" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_loader" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Gitee/CMBC/News/News_para_level/change_encoding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_loader/DatasetsGenerator.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -135,6 +221,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classifiers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="classifiers_visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NCAA-NBA-Picker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classifiers_visualization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,9 +277,6 @@
       <module name="NCAA-NBA-Picker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -189,11 +294,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.classifiers" />
-        <item itemvalue="Python.classifiers" />
+        <item itemvalue="Python.classifiers_visualization" />
         <item itemvalue="Python.processing_data" />
-        <item itemvalue="Python.classifiers" />
-        <item itemvalue="Python.classifiers" />
+        <item itemvalue="Python.processing_data" />
+        <item itemvalue="Python.classifiers_visualization" />
+        <item itemvalue="Python.classifiers_visualization" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +316,7 @@
       <workItem from="1549153314650" duration="3722000" />
       <workItem from="1549203660512" duration="5437000" />
       <workItem from="1549209179794" duration="137000" />
+<<<<<<< HEAD
       <workItem from="1549209485402" duration="4395000" />
     </task>
     <task id="LOCAL-00001" summary="fully-functional cls">
@@ -219,12 +325,20 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1549210376104</updated>
+=======
+      <workItem from="1549209485402" duration="852000" />
+      <workItem from="1549465620102" duration="3268000" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="20310000" />
+=======
+    <option name="totallyTimeSpent" value="20035000" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,10 +350,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2208" height="1208" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1228" height="777" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49802372" weight="0.34253094" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.02529511" />
       <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.23608316" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -252,9 +365,15 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.17177345" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Floobits" order="10" weight="0.3286908" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.60167134" />
       <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.55431753" />
+=======
+      <window_info anchor="bottom" id="Floobits" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5357664" />
+      <window_info active="true" anchor="bottom" x="27" y="194" width="1186" height="30" id="Python Console" order="12" visible="true" weight="0.93430656" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -295,13 +414,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Gitee/CMBC/News/News_para_level/change_encoding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Gitee/CMBC/News/News_para_level/change_encoding.py" />
     <entry file="file://$PROJECT_DIR$/transient/nbc_draft_pred.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -309,20 +422,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/compose/_column_transformer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6359">
-          <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/compose/_column_transformer.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/parallel.py" />
     <entry file="file://$PROJECT_DIR$/rnn_player_point_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -344,14 +445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data/draftpicks/csv/2018.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-2026" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/data/draftpicks/csv/2018.csv" />
     <entry file="file://$PROJECT_DIR$/data_loader/data/early_applicants/txt/2017.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -359,16 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/Draft.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../handson-ml-self/02_end_to_end_machine_learning_project.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../handson-ml-self/02_end_to_end_machine_learning_project.ipynb" />
     <entry file="file://$PROJECT_DIR$/ncaa-nba-applicants-picker.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -377,40 +462,65 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_stats_raw_features.csv" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="685" selection-start-line="685" selection-end-line="685" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/ensemble/voting_classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processing_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="49" selection-start-line="52" selection-start-column="62" selection-end-line="53" />
-          <folding>
-            <element signature="e#195#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/io/parsers.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/ensemble/voting_classifier.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/numpy_pickle.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/preprocessing/label.py" />
+    <entry file="file://$PROJECT_DIR$/data_loader/Draft.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data_loader/DatasetsGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
+        <state relative-caret-position="280">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/Applicants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/processing_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="49" selection-start-line="52" selection-start-column="62" selection-end-line="53" />
+=======
+    <entry file="file://$USER_HOME$/anaconda/envs/py365/lib/python3.6/site-packages/sklearn/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classifiers_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classifiers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/externals/joblib/numpy_pickle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="806">
@@ -436,8 +546,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="32" column="93" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
+=======
+    <entry file="file://$PROJECT_DIR$/processing_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+>>>>>>> fd773495500570b7b2685974262754c07a21c6dc
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#195#214#0" expanded="true" />
           </folding>
         </state>
       </provider>
