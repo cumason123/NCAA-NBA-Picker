@@ -15,13 +15,19 @@ Note:
 
 ## Files
 
+Scripts (according to the processing sequence)
+
+- data_loader/DatasetsGenerator: a collections of scripts to preprocess the data, written by Curtis 
+- processing_data.py: prepares the data for the machine learning models
+- configs.py: the features
 - **classifiers.py**: the machine learning classifiers
 - **classifiers_visualization.py**: visualizes the trained model of the random forest
-- **Game_Prediction.ipynb**: uses neural networks to predict outcomes of games
-- processing_data.py: prepares the data for the machine learning models
-- data_loader: a collections of scripts to preprocess the data 
+
+Other:
+
 - models: the trained models
-- transient: code that is no longer used by use, but kept for historic purposes
+- **Game_Prediction.ipynb**: uses neural networks to predict outcomes of games
+- transient: code that is no longer used, but kept for historic purposes
 
 ## Team
 

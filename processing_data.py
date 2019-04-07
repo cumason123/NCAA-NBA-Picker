@@ -20,7 +20,9 @@ from sklearn.model_selection import train_test_split
 
 from data_loader.Draft import Draft
 from data_loader.Applicants import Applicants
-X = pd.read_csv("./data_loader/data/training_data/player_stats_raw_features.csv")
+
+player_stats_raw_features = pd.read_csv("./data_loader/data/training_data/player_stats_raw_features.csv")
+player_stats_raw_features.drop_duplicates(inplace=True)
 
 num_attribs = ['pts', 'fga', 'fga3', 'fgm', 'fgm3', 'fta', 'ftm', 'ast', 'blk', 'stl', 'dreb', 'oreb', 'reb', 'pf', 'tf', 'tov', 'mins_played', 'grade_level', 'division', 'height_in']
 cat_attribs = ["school", "conference", "position"]
@@ -41,8 +43,9 @@ full_pipeline = ColumnTransformer([
         ("cat", OneHotEncoder(), cat_attribs)
 ])
 
-working = full_pipeline.fit_transform(X)
-np.savetxt("./data_loader/data/training_data/player_stats_features.csv", working, delimiter=",")
+player_stats_features = full_pipeline.fit_transform(player_stats_raw_features)
+
+np.savetxt("./data_loader/data/training_data/player_stats_features.csv", player_stats_features, delimiter=",")
 
 X, y = pd.read_csv("./data_loader/data/training_data/player_stats_features.csv", index_col=0), pd.read_csv(
         "./data_loader/data/training_data/player_stats_labels.csv", index_col=0)
