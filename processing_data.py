@@ -16,11 +16,6 @@ from sklearn.preprocessing import Imputer
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 
-# X = pd.read_csv("./data_loader/data/training_data/player_stats_raw_features.csv")
-
-from data_loader.Draft import Draft
-from data_loader.Applicants import Applicants
-
 player_stats_raw_features = pd.read_csv("./data_loader/data/training_data/player_stats_raw_features.csv")
 player_stats_raw_features.drop_duplicates(inplace=True)
 

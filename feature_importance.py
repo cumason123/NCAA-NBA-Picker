@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import joblib
+from sklearn.externals import joblib
+import configs
 
 from sklearn.datasets import make_classification
 from sklearn.ensemble import ExtraTreesClassifier
@@ -15,14 +16,17 @@ indices = np.argsort(importances)[::-1]
 # Print the feature ranking
 print("Feature ranking:")
 
-for f in range(X.shape[1]):
-    print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
-
+num_feature = len(configs.feature_names)
+ordered = []
+for f in range(num_feature):
+    print("%d. feature %s (%f)" % (f + 1, configs.feature_names[indices[f]], importances[indices[f]]))
+    ordered.append(configs.feature_names[indices[f]])
 # Plot the feature importances of the forest
-plt.figure()
+plt.figure(figsize=(40, 5))
 plt.title("Feature importances")
-plt.bar(range(X.shape[1]), importances[indices],
+plt.bar(range(num_feature), importances[indices],
        color="r", yerr=std[indices], align="center")
-plt.xticks(range(X.shape[1]), indices)
-plt.xlim([-1, X.shape[1]])
+
+plt.xticks(range(num_feature), ordered)
+plt.xlim([-1, num_feature])
 plt.show()
